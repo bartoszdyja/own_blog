@@ -17,5 +17,5 @@ Blog.controller 'WebsiteCtrl', ($scope, $http) ->
   $scope.newHello = {}
   $scope.name     = 'Doctor'
 
-  $http.get('/articles.json').success (hellos) ->
-    $scope.hellos = hellos
+  $http.get('/articles/index.json').success (articles) ->
+    $scope.articles = articles
