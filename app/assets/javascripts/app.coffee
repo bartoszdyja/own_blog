@@ -1,4 +1,4 @@
-Blog = angular.module('Blog', ['ui.router', 'templates'])
+Blog = angular.module('Blog', ['ui.router', 'templates', 'ngMaterial'])
 
 Blog.config ($locationProvider) ->
   $locationProvider.html5Mode false

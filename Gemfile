@@ -12,10 +12,14 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'coffee-rails', '~> 4.1.0'
 gem 'active_model_serializers'
+gem 'jquery-rails', '~> 4.0.5'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-angularjs'
   gem 'rails-assets-ui-router'
+  gem 'rails-assets-angular-material'
+  gem 'rails-assets-angular-animate'
+  gem 'rails-assets-angular-aria'
 end
 
 group :development, :test do

@@ -1,3 +1,13 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <li><a href="collapsible.html">JavaScript</a></li>
+    </ul>
+  </div>
+</nav>
 to jest home
 <div ng-controller="WebsiteCtrl">
 <ul>
@@ -6,3 +16,41 @@ to jest home
     </li>
   </ul>
   </div>
+
+<!-- Modal Trigger -->
+<div class="col">
+    <a class='btn' href='#demoModal' modal>Show Modal</a>
+</div>
+<!-- Modal Structure -->
+<div id="demoModal" class="modal">
+    <div class="modal-content">
+        <h4>Modal header</h4>
+        <p>A bunch of text</p>
+    </div>
+
+
+
+<div ng-controller="AppCtrl" class="md-padding" id="popupContainer">
+  <p class="inset">
+    Open a dialog over the app's content. Press escape or click outside to close the dialog and
+    send focus back to the triggering button.
+  </p>
+  <div class="dialog-demo-content" layout="row" layout-wrap >
+    <md-button class="md-primary md-raised" ng-click="showAlert($event)" flex flex-md="100">
+      Alert Dialog
+    </md-button>
+    <md-button class="md-primary md-raised" ng-click="showConfirm($event)" flex flex-md="100">
+      Confirm Dialog
+    </md-button>
+    <md-button class="md-primary md-raised" ng-click="showAdvanced($event)" flex flex-md="100">
+      Custom Dialog
+    </md-button>
+  </div>
+  <div ng-if="status">
+    <br/>
+    <b layout="row" layout-align="center center" class="md-padding">
+      {{status}}
+    </b>
+  </div>
+</div>
+
