@@ -11,7 +11,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'coffee-rails', '~> 4.1.0'
-gem 'decent_exposure', '~> 2.3.2'
+gem 'active_model_serializers'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-angularjs'
