@@ -1,9 +1,12 @@
 Blog = angular.module('Blog', ['ui.router', 'templates', 'ngMaterial'])
 
-Blog.config ($locationProvider) ->
-  $locationProvider.html5Mode false
+Blog.config ['$locationProvider'
+  ($locationProvider) ->
+    $locationProvider.html5Mode false
+]
 
-Blog.config ($stateProvider, $urlRouterProvider) ->
+Blog.config ['$stateProvider', '$urlRouterProvider' 
+  ($stateProvider, $urlRouterProvider) ->
     $stateProvider
       .state('home',
         url: '/home'
@@ -12,10 +15,13 @@ Blog.config ($stateProvider, $urlRouterProvider) ->
         templateUrl: 'home/away.html'
     
     $urlRouterProvider.otherwise 'home'
+]
 
-Blog.controller 'WebsiteCtrl', ($scope, $http) ->
-  $scope.newHello = {}
-  $scope.name     = 'Doctor'
+Blog.controller 'WebsiteCtrl', ['$scope', '$http'
+  ($scope, $http) ->
+    $scope.newHello = {}
+    $scope.name     = 'Doctor'
 
-  $http.get('/articles/index.json').success (articles) ->
-    $scope.articles = articles
+    $http.get('/articles/index.json').success (articles) ->
+      $scope.articles = articles
+]
