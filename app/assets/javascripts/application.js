@@ -4,4 +4,6 @@
 //= require angular-animate
 //= require angular-material
 //= require angular-aria
+//= require app
+//= require dialog
 //= require_tree .
