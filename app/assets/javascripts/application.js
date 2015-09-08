@@ -6,4 +6,5 @@
 //= require angular-aria
 //= require app
 //= require dialog
+//= require prism
 //= require_tree .

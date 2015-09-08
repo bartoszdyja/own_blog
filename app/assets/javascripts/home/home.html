@@ -1,51 +1,35 @@
-<nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Logo</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">JavaScript</a></li>
-    </ul>
-  </div>
-</nav>
-to jest home
 <div ng-controller="WebsiteCtrl">
-<ul>
-    <li ng-repeat="article in articles">
-    {{ article.title }}
-    </li>
-  </ul>
-  </div>
+  <md-content>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings">
+          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+        <h2>
+          <span>RailsBeginner</span>
+        </h2>
+        <span flex></span>
+        <p>dsf</p>
+      </div>
+    </md-toolbar>
+    <br>
 
-<!-- Modal Trigger -->
-<div class="col">
-    <a class='btn' href='#demoModal' modal>Show Modal</a>
+  </md-content>
+  <md-card ng-repeat="article in articles">
+    <md-card-content>
+      <h2 class="md-title">{{ article.title }}</h2>
+      <p>
+        {{article.content}}
+      </p>
+    </md-card-content>
+  </md-card>
+  <pre>
+<code class="language-ruby">
+
+  class Article < ActiveRecord::Base
+  end
+
+</code>
+</pre>
+
 </div>
-<!-- Modal Structure -->
-<div id="demoModal" class="modal">
-    <div class="modal-content">
-        <h4>Modal header</h4>
-        <p>A bunch of text</p>
-    </div>
-
-
-
-<div ng-controller="AppCtrl" class="md-padding" id="popupContainer">
-  <p class="inset">
-    Open a dialog over the app's content. Press escape or click outside to close the dialog and
-    send focus back to the triggering button.
-  </p>
-  <div class="dialog-demo-content" layout="row" layout-wrap >
-    <md-button class="md-primary md-raised" ng-click="showAlert($event)" flex flex-md="100">
-      Alert Dialog
-    </md-button>
-    
-  </div>
-  <div ng-if="status">
-    <br/>
-    <b layout="row" layout-align="center center" class="md-padding">
-      {{status}}
-    </b>
-  </div>
-</div>
-

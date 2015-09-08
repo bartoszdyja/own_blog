@@ -8,13 +8,13 @@ Blog.config ['$locationProvider'
 Blog.config ['$stateProvider', '$urlRouterProvider' 
   ($stateProvider, $urlRouterProvider) ->
     $stateProvider
-      .state('home',
-        url: '/home'
+      .state('/',
+        url: '/'
         templateUrl: 'home/home.html').state 'away',
         url: '/away'
         templateUrl: 'home/away.html'
     
-    $urlRouterProvider.otherwise 'home'
+    $urlRouterProvider.otherwise '/'
 ]
 
 Blog.controller 'WebsiteCtrl', ['$scope', '$http'
